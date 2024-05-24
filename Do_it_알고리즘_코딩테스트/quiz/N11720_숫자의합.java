@@ -1,4 +1,4 @@
-package Do_it_알고리즘_코딩테스트;
+package Do_it_알고리즘_코딩테스트.quiz;
 // 백준 제출 시에는 패키지도 지우고, 클래스 이름도 Main 으로 할 것 !!
 
 import java.io.*;

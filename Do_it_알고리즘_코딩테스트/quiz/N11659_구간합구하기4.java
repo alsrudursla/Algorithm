@@ -1,4 +1,4 @@
-package Do_it_알고리즘_코딩테스트;
+package Do_it_알고리즘_코딩테스트.quiz;
 
 import java.io.*;
 import java.util.*;
