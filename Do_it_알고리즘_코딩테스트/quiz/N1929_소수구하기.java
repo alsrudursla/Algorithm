@@ -19,7 +19,7 @@ public class N1929_소수구하기 {
         arr[1] = 0;
         for (int i = 2; i <= Math.sqrt(N); i++) {
             if (arr[i] == 0) continue;
-            for (int j = i * i; j <= N; j = j+i) {
+            for (int j = i+i; j <= N; j = j+i) {
                 arr[j] = 0;
             }
         }
