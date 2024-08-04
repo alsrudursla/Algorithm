@@ -21,30 +21,30 @@ public class N1197_최소스패닝트리 {
         }
 
         // 에지 리스트로 그래프 표현 (입력값)
-        List<Edge> graph = new ArrayList<>();
+        List<Edge2> graph = new ArrayList<>();
         for (int i = 0; i < e; i ++) {
             st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
             int c = Integer.parseInt(st.nextToken());
 
-            graph.add(new Edge(a,b,c));
+            graph.add(new Edge2(a,b,c));
         }
 
         // 가중치 기준 오름차순 정렬
-        graph.sort(new Comparator<Edge>() {
+        graph.sort(new Comparator<Edge2>() {
             @Override
-            public int compare(Edge o1, Edge o2) {
+            public int compare(Edge2 o1, Edge2 o2) {
                 return Integer.compare(o1.weight, o2.weight);
             }
         });
 
         // 정답 그래프
-        List<Edge> graph_ans = new ArrayList<>();
+        List<Edge2> graph_ans = new ArrayList<>();
 
         // 연결된 에지가 N-1 일 때까지 반복
         int connected_edge = 0;
-        for (Edge edge : graph) {
+        for (Edge2 edge : graph) {
             if (connected_edge == v-1) break;
 
             // 사이클이 아닐 때만 연결 (유니온 파인드 리스트 대표 노드 확인)
@@ -59,7 +59,7 @@ public class N1197_최소스패닝트리 {
 
         // 가중치 합 출력
         int sum = 0;
-        for (Edge edge : graph_ans) {
+        for (Edge2 edge : graph_ans) {
             sum += edge.weight;
         }
 
@@ -89,12 +89,12 @@ public class N1197_최소스패닝트리 {
     }
 }
 
-class Edge {
+class Edge2 {
     int node1;
     int node2;
     int weight;
 
-    public Edge (int node1, int node2, int weight) {
+    public Edge2 (int node1, int node2, int weight) {
         this.node1 = node1;
         this.node2 = node2;
         this.weight = weight;
