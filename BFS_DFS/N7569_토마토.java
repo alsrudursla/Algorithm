@@ -5,6 +5,7 @@ import java.util.*;
 
 /*
 3차원 배열 → [z][y][x]
+익은 토마토부터 큐에 넣기
 토마토 값으로 날짜 저장하기
  */
 public class N7569_토마토 {
