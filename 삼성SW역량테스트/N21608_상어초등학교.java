@@ -1,4 +1,4 @@
-package 시뮬레이션;
+package 삼성SW역량테스트;
 
 import java.io.*;
 import java.util.*;
